@@ -51,14 +51,11 @@ export default {
                             // remove topic from category
                             result.topic_list.topics.forEach(function(topic, index) {
                                 if (topic.category_id != "10") {
-                                    console.log(topic.category_id);
                                     customTopics.push(topic);
                                 }
                             });
 
-                            // result.topic_list.topics = customTopics;
-
-                            // customFeaturedTopics
+                            // component customFeaturedTopics
                             let customFeaturedTopics = [];
                             customTopics
                                 .slice(0, 4)
@@ -67,7 +64,7 @@ export default {
                                 );
                             component.set("customFeaturedTopics", customFeaturedTopics);
 
-                            // customLatestTopicsLeft
+                            // component customLatestTopicsLeft
                             let customLatestTopicsLeft = [];
                             customTopics
                                 .slice(4, 12)
@@ -76,7 +73,7 @@ export default {
                                 );
                             component.set("customLatestTopicsLeft", customLatestTopicsLeft);
 
-                            // customLatestTopicsRight
+                            // component customLatestTopicsRight
                             let customLatestTopicsRight = [];
                             customTopics
                                 .slice(13, 29)
