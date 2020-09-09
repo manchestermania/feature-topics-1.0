@@ -49,7 +49,7 @@ export default {
                             let customTopics = [];
 
                             // remove topic from category
-                            customTopics.forEach(function(topic, index) {
+                            result.topic_list.topics.forEach(function(topic, index) {
                                 if (topic.category_id != "10") {
                                     console.log(topic.category_id);
                                     customTopics.push(topic);
