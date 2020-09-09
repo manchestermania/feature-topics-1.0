@@ -56,7 +56,7 @@ export default {
 
                             console.log(result.topic_list.topics);
 
-                            result.topic_list.topics = customTopics;
+                            // result.topic_list.topics = customTopics;
 
                             // customFeaturedTopics
                             let customFeaturedTopics = [];
