@@ -15,6 +15,7 @@ export default {
 
       withPluginApi("0.1", api => {
           api.onPageChange(url => {
+            console.log('url',url);
 
               const home = url === "/" || url.match(/^\/\?/) || url === homeRoute;
 
