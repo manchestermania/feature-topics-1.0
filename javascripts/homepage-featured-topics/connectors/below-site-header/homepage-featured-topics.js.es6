@@ -45,16 +45,17 @@ export default {
                     // Get topics from url
                     ajax(topics_json)
                         .then(result => {
-                            let customTopics = [];
+
+                            let customTopics = result.topic_list.topics;
 
                             // remove topic from category
-                            result.topic_list.topics.forEach(function(topic, index) {
-                                if (topic.category_id != "10") {
-                                    customTopics.push(topic);
-                                }
-                            });
+                            # customTopics.forEach(function(topic, index) {
+                            #     if (topic.category_id != "10") {
+                            #         customTopics.push(topic);
+                            #     }
+                            # });
 
-                            console.log(result.topic_list.topics);
+                            console.log(customTopics);
 
                             // result.topic_list.topics = customTopics;
 
