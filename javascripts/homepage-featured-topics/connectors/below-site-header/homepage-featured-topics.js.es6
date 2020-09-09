@@ -46,7 +46,7 @@ export default {
                     ajax(topics_json)
                         .then(result => {
 
-                            let customTopics = result.topic_list.topics;
+                            let customTopics = [];
 
                             // remove topic from category
                             customTopics.forEach(function(topic, index) {
@@ -56,11 +56,11 @@ export default {
                                 }
                             });
 
-                            result.topic_list.topics = customTopics;
+                            // result.topic_list.topics = customTopics;
 
                             // customFeaturedTopics
                             let customFeaturedTopics = [];
-                            result.topic_list.topics
+                            customTopics
                                 .slice(0, 4)
                                 .forEach(topic =>
                                     customFeaturedTopics.push(Topic.create(topic))
@@ -69,7 +69,7 @@ export default {
 
                             // customLatestTopicsLeft
                             let customLatestTopicsLeft = [];
-                            result.topic_list.topics
+                            customTopics
                                 .slice(4, 12)
                                 .forEach(topic =>
                                     customLatestTopicsLeft.push(Topic.create(topic))
@@ -78,7 +78,7 @@ export default {
 
                             // customLatestTopicsRight
                             let customLatestTopicsRight = [];
-                            result.topic_list.topics
+                            customTopics
                                 .slice(13, 29)
                                 .forEach(topic =>
                                     customLatestTopicsRight.push(Topic.create(topic))
