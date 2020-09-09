@@ -89,7 +89,7 @@ export default {
                         })
                         .finally(() => component.set("loadingFeatures", false))
                         .catch(e => {
-                            // the featured tag doesn't exist
+                            // the featured tag doesnt exist
                             if (e.jqXHR && e.jqXHR.status === 404) {
                                 document.querySelector("html").classList.remove(FEATURED_CLASS);
                                 component.set("displayHomepageFeatured", false);
