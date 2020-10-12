@@ -47,10 +47,11 @@ export default {
                         .then(result => {
 
                             let customTopics = [];
+                            let removeCategory = [10,78,79];
 
                             // remove topic from category
                             result.topic_list.topics.forEach(function(topic, index) {
-                                if (topic.category_id != "10") {
+                                if (removeCategory.indexOf(topic.category_id) == -1) {
                                     customTopics.push(topic);
                                 }
                             });
