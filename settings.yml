@@ -12,7 +12,7 @@ hide_featured_tag:
   description: When this is enabled the featured tag will be hidden from users that aren't admins/moderators.
 
 hide_category:
-  default: false
+  default: ""
   description: Topics from these categories are not shown separated by a comma
 
 show_on_url:
