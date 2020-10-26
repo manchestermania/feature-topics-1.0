@@ -48,7 +48,7 @@ export default {
 
                             let customTopics = [];
                             let hideCategory = [];
-                            if (settings.hide_category != '') hide_category = $.map(settings.hide_category.split(","), function(value){
+                            if (settings.hide_category != '') hideCategory = $.map(settings.hide_category.split(","), function(value){
                                 return parseInt(value, 10);
                             });
                         
