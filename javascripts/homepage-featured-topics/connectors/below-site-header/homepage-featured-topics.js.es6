@@ -1,5 +1,3 @@
-
-
 import { ajax } from "discourse/lib/ajax";
 import Topic from "discourse/models/topic";
 import { withPluginApi } from "discourse/lib/plugin-api";
@@ -49,7 +47,8 @@ export default {
                         .then(result => {
 
                             let customTopics = [];
-                            let hideCategory = settings.hide_category.split(",");
+                            let hideCategory = [];
+                            if (settings.hide_category != '') hideCategory = settings.hide_category.split(",");
 
                             // Topics from these categories are not shown
                             result.topic_list.topics.forEach(function(topic, index) {
@@ -58,7 +57,7 @@ export default {
                                 }
                             });
 
-                            // component customFeaturedTopics
+                            // Component customFeaturedTopics
                             let customFeaturedTopics = [];
                             customTopics
                                 .slice(0, 4)
