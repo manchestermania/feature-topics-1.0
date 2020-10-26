@@ -48,8 +48,10 @@ export default {
 
                             let customTopics = [];
                             let hideCategory = [];
-                            if (settings.hide_category != '') hideCategory = settings.hide_category.split(",");
-
+                            if (settings.hide_category != '') hide_category = $.map(settings.hide_category.split(","), function(value){
+                                return parseInt(value, 10);
+                            });
+                        
                             // Topics from these categories are not shown
                             result.topic_list.topics.forEach(function(topic, index) {
                                 if (hideCategory.indexOf(topic.category_id) == -1) {
