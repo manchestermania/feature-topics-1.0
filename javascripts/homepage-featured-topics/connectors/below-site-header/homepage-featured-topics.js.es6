@@ -1,3 +1,5 @@
+
+
 import { ajax } from "discourse/lib/ajax";
 import Topic from "discourse/models/topic";
 import { withPluginApi } from "discourse/lib/plugin-api";
@@ -47,11 +49,11 @@ export default {
                         .then(result => {
 
                             let customTopics = [];
-                            let removeCategory = [10,78,79];
+                            let hideCategory = settings.hide_category.split(",");
 
-                            // remove topic from category
+                            // Topics from these categories are not shown
                             result.topic_list.topics.forEach(function(topic, index) {
-                                if (removeCategory.indexOf(topic.category_id) == -1) {
+                                if (hideCategory.indexOf(topic.category_id) == -1) {
                                     customTopics.push(topic);
                                 }
                             });
