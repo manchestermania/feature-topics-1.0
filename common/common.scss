@@ -461,6 +461,8 @@ img.dt-lazy-loaded {
     a {
         position: relative;
         text-decoration: none;
+        display: block;
+        height: 100%;
         z-index: 2;
     }
 
