@@ -71,7 +71,7 @@ export default {
                             // component customLatestTopicsLeft
                             let customLatestTopicsLeft = [];
                             customTopics
-                                .slice(4, 12)
+                                .slice(4, 5)
                                 .forEach(topic =>
                                     customLatestTopicsLeft.push(Topic.create(topic))
                                 );
@@ -80,7 +80,7 @@ export default {
                             // component customLatestTopicsRight
                             let customLatestTopicsRight = [];
                             customTopics
-                                .slice(13, 29)
+                                .slice(6, 8)
                                 .forEach(topic =>
                                     customLatestTopicsRight.push(Topic.create(topic))
                                 );
