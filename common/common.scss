@@ -17,10 +17,10 @@
             background: #F5F5F5;
             color: #252a2e;
             font-size: 3vw;
-            height: 0vw;
+            height: 10vw;
             overflow: hidden;
             padding: 0;
-            position: relative;
+            position: center;
             &:after {
                 background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff);
                 bottom: 0;
